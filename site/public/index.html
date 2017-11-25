@@ -25,18 +25,30 @@
     <title>HackatonVLI</title> -->
 </head>
 <body>
-    <nav class="light-blue darken-2">
-        <div class="nav-wrapper">
-            <form>
-            <div class="input-field">
-                <input id="search" type="search" required>
-                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                <i class="material-icons">close</i>
+    <div class="navbar-fixed">
+        <nav class="white">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo"><img style="width: 60px; height: 40px; margin-top: .8rem; margin-left: .5rem;" src="img/VLi.png" alt=""></a>      
+                        
+                <i class="large material-icons right" style="color: blue; font-size: 2.5rem; cursor: pointer;">search</i>
             </div>
-            </form>
-        </div>
-    </nav>
-    <section>
+        </nav>
+    </div>
+    <div class="navbar" style="display: none;">
+        <nav class="light-blue darken-2"> 
+            <div class="nav-wrapper">
+                <form>
+                <div class="input-field">
+                    <input id="search" type="search" required>
+                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                    <i class="material-icons">close</i>
+                </div>
+                </form>
+            </div>
+        </nav>
+    </div>
+
+    <section id="index">
         <div class="container">
             <div class="row">
                 <!-- Araguari-->
@@ -46,12 +58,45 @@
                             <img class="activator" src="img/araguari.jpg" class="imgPrinc" style="height: 400px;">
                         </div>
                         <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4 " ><span class="new badge btn btn-floating pulse red">2</span>Araguari<i class="material-icons right">more_vert</i></span>
-                            <p><button class="btn"><a href="#">Equipamentos</a></button></p>
+                            <span class="card-title activator grey-text text-darken-4">
+                                <span class="new badge btn btn-floating pulse yellow" style="right: 2rem;">
+                                    2
+                                </span>
+                                <span class="new badge btn btn-floating pulse red" style="right: 2rem;">
+                                    1
+                                </span>
+                                <!-- Modal Trigger -->
+                                Araguari (TIA)
+
+                                <i class="material-icons right" style="margin-right: -8rem;">
+                                    more_vert
+                                </i>
+                            </span>
+                            <p><button class="btn" onclick="equipamentos()"><a href="#">Equipamentos</a></button></p>
                         </div>
                         <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Araguari<i class="material-icons right">close</i></span>
-                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                            <span class="card-title grey-text text-darken-4 center">Araguari (TIA)<i class="material-icons right">close</i></span>
+                            <!-- <p>
+
+                            </p> -->
+                            <div class="container center">
+                                <div class="row">
+                                    <ul class="collapsible popout " data-collapsible="accordion">
+                                        <li>
+                                            <div class="collapsible-header"><i class="material-icons">aspect_ratio</i>Motores<span class="new badge btn btn-floating pulse red">&nbsp;</span></div>
+                                            <div class="collapsible-body"><span>Motor ELE-003 necessita de troca.</span></div>
+                                        </li>
+                                        <li>
+                                            <div class="collapsible-header"><i class="material-icons">camera_rear</i>Redutores<span class="new badge btn btn-floating pulse yellow">&nbsp;</span></div>
+                                            <div class="collapsible-body"><span>Redutor TRG-006 necessita de reparo.</span></div>
+                                        </li>
+                                        <li>
+                                            <div class="collapsible-header"><i class="material-icons">local_movies</i>Correias<span class="new badge btn btn-floating pulse yellow">&nbsp;</span></div>
+                                            <div class="collapsible-body"><span>Correia </span></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -62,11 +107,11 @@
                             <img class="activator" src="img/uberaba.png" class="imgPrinc" style="height: 400px;">
                         </div>
                         <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Uberaba<span class="new badge btn btn-floating pulse yellow ">2</span><i class="material-icons right">more_vert</i></span>
+                            <span class="card-title activator grey-text text-darken-4">Uberaba (TIUB)<span class="new badge btn btn-floating pulse yellow ">2</span><i class="material-icons right">more_vert</i></span>
                             <p><button class="btn"><a href="#">Equipamentos</a></button></p>
                         </div>
                         <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">uberaba<i class="material-icons right">close</i></span>
+                            <span class="card-title grey-text text-darken-4">Uberaba (TIUB)<i class="material-icons right">close</i></span>
                             <p>Here is some more information about this product that is only revealed once clicked on.</p>
                         </div>
                     </div>
@@ -78,11 +123,11 @@
                             <img class="activator" src="img/guara.jpg" class="imgPrinc" style="height: 400px;">
                         </div>
                         <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Guará<span class="new badge btn btn-floating pulse orange">3</span><i class="material-icons right">more_vert</i></span>
+                            <span class="card-title activator grey-text text-darken-4">Guará (TIGU)<span class="new badge btn btn-floating grey">3</span><i class="material-icons right">more_vert</i></span>
                             <p><button class="btn"><a href="#">Equipamentos</a></button></p>
                         </div>
                         <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Guará<i class="material-icons right">close</i></span>
+                            <span class="card-title grey-text text-darken-4">Guará (TIGU)<i class="material-icons right">close</i></span>
                             <p>Here is some more information about this product that is only revealed once clicked on.</p>
                         </div>
                     </div>
@@ -95,11 +140,11 @@
                             <img class="activator" src="img/pirapora.jpg" class="imgPrinc" style="height: 400px;">
                         </div>
                         <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Pirapora<i class="material-icons right">more_vert</i></span>
+                            <span class="card-title activator grey-text text-darken-4">Pirapora (TIPI)<i class="material-icons right">more_vert</i></span>
                             <p><button class="btn"><a href="#">Equipamentos</a></button></p>
                         </div>
                         <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Guará<i class="material-icons right">close</i></span>
+                            <span class="card-title grey-text text-darken-4">Pirapora (TIPI)<i class="material-icons right">close</i></span>
                             <p>Here is some more information about this product that is only revealed once clicked on.</p>
                         </div>
                     </div>
@@ -107,6 +152,170 @@
             </div>
         </div>        
     </section>
+
+    <div class="container center" id="equipamento" style="display: none;">
+        <div class="row">
+            <!-- Modal Trigger -->
+            <a class="waves-effect waves-light modal-trigger" href="#modal1"><h2 class="center">Araguari (TIA)</h2></a>
+            
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>Característica</h4>
+                    <p>Localizado em Araguari (MG), é um dos maiores terminais de transbordo de grãos e fertilizantes da América Latina. O TI Araguari faz parte do Corredor Centro-Leste da VLI e compõe a principal alternativa logística integrada, responsável pela captação de cargas das principais fronteiras agrícolas do país, e por dar suporte ao escoamento do agronegócio pelo Complexo de Tubarão, no Espírito Santo.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+                </div>
+            </div>
+            <ul class="collapsible popout " data-collapsible="accordion">
+                <li>
+                <div class="collapsible-header"><i class="material-icons">aspect_ratio</i>Motores</div>
+                    <div class="collapsible-body"><span>
+                        <table class="highlight">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Quantidade de Reserva Necessária</th>
+                                    <th>Criticidade</th>
+                                    <th>Valor</th>
+                                </tr>
+                            </thead>
+                    
+                            <tbody>
+                                <tr style="cursor: pointer;">
+                                <a href="#">            
+                                    <td>ELE-001</td>
+                                    <td>1</td>
+                                    <td>B</td>
+                                    <td>R$ 36.000,00</td>
+                                </a>
+                                </tr>
+                                <tr style="cursor: pointer;">
+                                <td>ELE-002</td>
+                                <td>1</td>
+                                <td>B</td>
+                                <td>R$ 36.000,00</td>
+                                </tr>
+                                <!-- Modal Trigger -->
+                                <tr id="pane" style="cursor: pointer;">
+                                <td>
+                                    <a class="waves-effect waves-light modal-trigger" href="#modal2">                ELE-003
+                                    </a>
+                                </td>
+                                <td>1</td>
+                                <td>A</td>
+                                <td>R$ 36.000,00<span class="new badge btn btn-floating red">&nbsp;</span></td>
+                                </tr>
+                            </tbody>
+                        </table>    
+                    </span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">camera_rear</i>Redutores</div>
+                    <div class="collapsible-body">
+                        <span>
+                            <table class="highlight">
+                                <thead>
+                                    <tr>
+                                        <th>Nome</th>
+                                        <th>Item Name</th>
+                                        <th>Item Price</th>
+                                    </tr>
+                                </thead>
+                        
+                                <tbody>
+                                    <tr>
+                                    <td>TRG-005</td>
+                                    <td>Eclair</td>
+                                    <td>$0.87</td>
+                                    </tr>
+                                    <tr>
+                                    <td>TRG-006</td>
+                                    <td>Lollipop</td>
+                                    <td>$7.00<span class="new badge btn btn-floating pulse yellow">&nbsp;</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>    
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">local_movies</i>Correias</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+            </ul>
+                                                <!-- Modal Structure -->
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                    <h4>ELE-003</h4>
+                            <!-- <div class="collapsible-header"><i class="material-icons">camera_rear</i>Redutores</div>
+                            <div class="collapsible-body">
+                                <span>
+                                    <table class="highlight">
+                                        <thead>
+                                            <tr>
+                                                <th>Nome</th>
+                                                <th>Item Name</th>
+                                                <th>Item Price</th>
+                                            </tr>
+                                        </thead>
+                                
+                                        <tbody>
+                                            <tr>
+                                            <td>TRG-005</td>
+                                            <td>Eclair</td>
+                                            <td>$0.87</td>
+                                            </tr>
+                                            <tr>
+                                            <td>TRG-006</td>
+                                            <td>Lollipop</td>
+                                            <td>$7.00<span class="new badge btn btn-floating pulse yellow">&nbsp;</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>    
+                                </span>
+                            </div>
+                </div> -->
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+                </div>
+                </div>
+            </div>
+        <table style="margin-bottom: 2rem;">
+            <thead>
+                <tr>
+                    <th>Legenda</th>
+                    <th></th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                <tr>
+                <td><span class="new badge btn btn-floating red left">&nbsp;</span></td>
+                <td>Perda total da capacidade</td>
+                </tr>
+                <tr>
+                <td><span class="left new badge btn btn-floating yellow">&nbsp;</span></td>
+                <td>Taxa de falha</td>
+                </tr>
+                <tr>
+                <td><span class="left new badge btn btn-floating grey">&nbsp;</span></td>
+                <td>Rota alternativa <b>sem</b> perda de capacidade</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large blue">
+            <i class="large material-icons">arrow_upward</i>
+        </a>
+        <ul>
+            <li><a class="btn-floating green"><i class="material-icons">assignment</i></a></li>
+        </ul>
+    </div>
     <footer class="page-footer light-blue darken-2">
         <div class="container">
             <div class="row">
@@ -131,6 +340,14 @@
             </div>
         </div>
     </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/materialize.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        $(document).ready(function(){
+            // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+            $('.modal').modal();
+        });
+    </script>
 </body>
 </html>

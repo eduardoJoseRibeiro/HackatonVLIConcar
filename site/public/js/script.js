@@ -5,3 +5,8 @@ function equipamentos(){
     equipamento.style.display = 'block';
     index.style.display = 'none';
 }
+
+function pane(){
+    let pane = document.getElementById("pane");
+    
+}
