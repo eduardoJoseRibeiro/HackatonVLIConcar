@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <!--Import Css Customizado -->
+    <link rel="stylesheet" href="css/estilo.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Último entrada</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-extended light-blue darken-2">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo center">Controle de Entrada</a>
+            </div>
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                    <li class="tab"><a href="#test1" id="usuarios" class="active">Usuários</a></li>
+                    <li class="tab"><a href="#test2" id="ultimaEntrada">Última Entrada</a></li>
+                    <li class="tab"><a href="#test3" id="entradasRecentes">Entradas Recentes</a></li>
+                    <!--<li class="tab"><a href="#test4" id="devolverCarros">Devolver Carro</a></li>-->
+                </ul>
+            </div>
+        </nav>
+        <div id="test1" class="col s12">
+            <table class="resposive-table highlight">
+                <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Código</th>
+                </tr>
+                </thead>
+
+                <tbody id="dadosUsuarios">
+                <tr>
+                    <td>Carregando...</td>
+                    <td>Carregando...</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="test2" class="col s12">
+            <div class="container" style="margin-top: 30px;">
+                <div class="row" id="divFoto">
+                    <div id="imagemDinamica">
+                        <img class="col s6" src="img/default.png" alt="" style="border-radius: 10px; width: 400px; height: 400px;">
+                    </div>
+                    <div>
+                        <h5 class="offset-s1 col s5">Nome: <span id="ultimaEntradaNome">----------</span></h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Atividade</th>
+                                    <th class="center">Completou atividade?</th>
+                                </tr>
+                            </thead>
+                    
+                            <tbody>
+                                <tr>
+                                <td>Temperatura Ambiente: </td>
+                                <td class="center"><i class="material-icons">done</i></td>
+                                </tr>
+                                <tr>
+                                <td>Vibração: </td>
+                                <td class="center"><i class="material-icons center">done</i></td>
+                                </tr>
+                                <tr>
+                                <td>Ruído: </td>
+                                <td class="center"><i class="material-icons">done</i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="test3" class="col s12">
+            <table class="resposive-table highlight">
+                <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Código</th>
+                </tr>
+                </thead>
+
+                <tbody id="dadosRecentes">
+                <tr>
+                    <td>Carregando...</td>
+                    <td>Carregando...</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--<div id="test4" class="col s12">Test 4</div>-->
+    </header>
+    <div class="fixed-action-btn horizontal">
+        <a class="btn-floating btn-large red">
+            <i class="large material-icons">library_add</i>
+        </a>
+        <ul>
+            <li><a class="btn-floating green" href="cadastrarCliente.html"><i class="material-icons">face</i></a></li>
+            <li><a class="btn-floating blue" href="cadastrarCarro.html"><i class="material-icons">directions_car</i></a></li>
+        </ul>
+    </div>
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
