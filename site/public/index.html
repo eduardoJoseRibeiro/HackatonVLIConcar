@@ -34,7 +34,7 @@
             </div>
         </nav>
     </div>
-    <div class="navbar" style="display: none;">
+    <div class="navbar" id="esconde">
         <nav class="light-blue darken-2"> 
             <div class="nav-wrapper">
                 <form>
@@ -152,7 +152,9 @@
             </div>
         </div>        
     </section>
+    <div id="colocaAqui">
 
+    </div>
     <div class="container center" id="equipamento" style="display: none;">
         <div class="row">
             <!-- Modal Trigger -->
@@ -177,6 +179,7 @@
                                 <tr>
                                     <th>Nome</th>
                                     <th>Quantidade de Reserva Necessária</th>
+                                    <th>Taxa de falha</th>
                                     <th>Criticidade</th>
                                     <th>Valor</th>
                                 </tr>
@@ -187,6 +190,7 @@
                                 <a href="#">            
                                     <td>ELE-001</td>
                                     <td>1</td>
+                                    <td>37%</td>
                                     <td>B</td>
                                     <td>R$ 36.000,00</td>
                                 </a>
@@ -194,6 +198,7 @@
                                 <tr style="cursor: pointer;">
                                 <td>ELE-002</td>
                                 <td>1</td>
+                                <td>26%</td>
                                 <td>B</td>
                                 <td>R$ 36.000,00</td>
                                 </tr>
@@ -204,6 +209,11 @@
                                     </a>
                                 </td>
                                 <td>1</td>
+                                <td style="color: red">
+                                    <a class="waves-effect waves-light modal-trigger" href="#modal3">                
+                                        90%
+                                    </a>
+                                </td>
                                 <td>A</td>
                                 <td>R$ 36.000,00<span class="new badge btn btn-floating red">&nbsp;</span></td>
                                 </tr>
@@ -248,41 +258,75 @@
                                                 <!-- Modal Structure -->
             <div id="modal2" class="modal">
                 <div class="modal-content">
-                    <h4>ELE-003</h4>
-                            <!-- <div class="collapsible-header"><i class="material-icons">camera_rear</i>Redutores</div>
-                            <div class="collapsible-body">
-                                <span>
-                                    <table class="highlight">
-                                        <thead>
-                                            <tr>
-                                                <th>Nome</th>
-                                                <th>Item Name</th>
-                                                <th>Item Price</th>
-                                            </tr>
-                                        </thead>
-                                
-                                        <tbody>
-                                            <tr>
-                                            <td>TRG-005</td>
-                                            <td>Eclair</td>
-                                            <td>$0.87</td>
-                                            </tr>
-                                            <tr>
-                                            <td>TRG-006</td>
-                                            <td>Lollipop</td>
-                                            <td>$7.00<span class="new badge btn btn-floating pulse yellow">&nbsp;</span></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>    
-                                </span>
-                            </div>
-                </div> -->
+                    <h4>Histórico do Motor ELE-003</h4>
+                    <table class="highlight">
+                        <thead>
+                            <tr>
+                                <th>MTBF</th>
+                                <th>Aquisição</th>
+                                <th>Instalação</th>
+                                <th>Falha</th>
+                                <th>Conserto</th>
+                            </tr>
+                        </thead>
+                
+                        <tbody>
+                            <tr>
+                            <td>0h</td>
+                            <td>15/01/2017</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            </tr>
+                            <tr>
+                            <td>16h</td>
+                            <td>-</td>
+                            <td>20/02/2017</td>
+                            <td>-</td>
+                            <td>-</td>
+                            </tr>
+                            <tr>
+                            <td>32h</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>07/03/2017</td>
+                            <td>07/03/2017</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
                 </div>
                 <div class="modal-footer">
                     <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
                 </div>
-                </div>
             </div>
+            <div id="modal3" class="modal">
+                    <div class="modal-content">
+                        <h4>Status do Motor ELE-003</h4>
+                        <table class="highlight">
+                            <thead>
+                                <tr>
+                                    <th>Temperatura</th>
+                                    <th>Vibração</th>
+                                    <th>Horas de uso</th>
+                                </tr>
+                            </thead>
+                    
+                            <tbody>
+                                <tr>
+                                <td id="temperatura">80ºC</td>
+                                <td id="vibracao">184mm/s</td>
+                                <td id="horasUso">32.324h</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+                    </div>
+                </div>
+        </div>
         <table style="margin-bottom: 2rem;">
             <thead>
                 <tr>
@@ -313,9 +357,11 @@
             <i class="large material-icons">arrow_upward</i>
         </a>
         <ul>
-            <li><a class="btn-floating green"><i class="material-icons">assignment</i></a></li>
+            <li><a class="btn-floating green" onclick="listaProdutos()"><i class="material-icons">search</i></a></li>
         </ul>
     </div>
+    <a class="btn" onclick="Materialize.toast('I am a toast', 4000)">Toast!</a>
+    
     <footer class="page-footer light-blue darken-2">
         <div class="container">
             <div class="row">
