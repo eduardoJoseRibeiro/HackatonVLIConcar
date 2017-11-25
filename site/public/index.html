@@ -36,7 +36,7 @@
             </form>
         </div>
     </nav>
-    <section>
+    <section id="index">
         <div class="container">
             <div class="row">
                 <!-- Araguari-->
@@ -47,7 +47,7 @@
                         </div>
                         <div class="card-content">
                             <span class="card-title activator grey-text text-darken-4">Araguari<i class="material-icons right">more_vert</i></span>
-                            <p><button class="btn"><a href="#">Equipamentos</a></button></p>
+                            <p><button class="btn" onclick="equipamentos()"><a href="#">Equipamentos</a></button></p>
                         </div>
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4">Guará<i class="material-icons right">close</i></span>
@@ -107,6 +107,26 @@
             </div>
         </div>        
     </section>
+    <div class="container center" id="equipamento" style="display: none;">
+        <div class="row">
+            <h2 class="center">Araguari (TIA)</h2>
+            <ul class="collapsible popout " data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+                <li>
+                    <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+                    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
     <footer class="page-footer light-blue darken-2">
         <div class="container">
             <div class="row">
@@ -131,6 +151,8 @@
             </div>
         </div>
     </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/materialize.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
