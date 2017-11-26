@@ -38,7 +38,7 @@ window.setInterval(function(){
 
 let produtos = [{'tipo':'Motor', 'equipamento':'ELE-103A', 'local':'TIUB'},
     {'tipo':'Redutor', 'equipamento':'RDL-101', 'local':'TIUB'},
-    {'tipo':'Motor', 'equipamento':'ELE-002', 'local':'TIGU'},
+    {'tipo':'Motor', 'equipamento':'ELE-003', 'local':'<b style="color: green;">TIA</b>'},
     {'tipo':'Correia', 'equipamento':'TRC-131', 'local':'<b style="color: green;">TIA</b>'},
     {'tipo':'Motor', 'equipamento':'ELE-101', 'local':'TIUB'},
     {'tipo':'Motor', 'equipamento':'ELE-102', 'local':'TIUB'},
